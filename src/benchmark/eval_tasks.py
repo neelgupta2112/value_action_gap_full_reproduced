@@ -83,7 +83,7 @@ class TaskEvaluator:
 
     def save_results(self, df: pd.DataFrame, task_num: int):
         """Save evaluation results to CSV."""
-        output_path = os.path.join(self.output_dir, f"{self.model_name}_t{task_num}.csv")
+        output_path = os.path.join(self.output_dir, f"{self.model_name}_t{task_num}_reproduced.csv")
         df.to_csv(output_path, index=False)
         return df
 
